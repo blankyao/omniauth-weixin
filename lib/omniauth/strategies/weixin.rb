@@ -12,7 +12,7 @@ module OmniAuth
       option :provider_ignores_state, true
 
       def request_phase
-        redirect client.authorize_url(authorize_params)
+        redirect client.authorize_url(authorize_params) + "#wechat_redirect"
       end
 
       def authorize_params
